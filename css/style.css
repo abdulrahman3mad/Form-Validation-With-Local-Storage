@@ -1,0 +1,118 @@
+:root{
+    --main-clr:#50CEDD;
+    --main-clr-dark:#3ab6c4;
+    --bg-clr:#E7EBEE;
+    --bg-white:#fff;
+
+    --main-ff:Roboto;
+    --fw-bold: 700;
+    --fw-medium:500;
+    --fw-regular:400
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("../fonts/Roboto-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("../fonts/Roboto-Medium.ttf");
+    font-weight:500;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("../fonts/Roboto-Bold.ttf");
+    font-weight: 700;
+}
+
+
+body{
+    background-color:var(--bg-clr);
+    font-family: var(--main-ff);
+    font-weight: var(--fw-regular);
+    font-size: clamp(0.8rem, 4vw ,1rem);
+}
+
+.upper-bar{
+    background-color:var(--main-clr);
+    padding:5px;
+    text-align: center;
+    color:white;
+}
+
+.upper-bar p{
+    margin: 0;
+}
+
+.upper-bar a{
+    color:black
+}
+
+.form-container{
+    position: relative;
+    top:100px;
+
+}
+
+.form-container .user-icon{
+    background-color:var(--main-clr);
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top:-30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    border: 4px solid white;
+    color:white;
+}
+
+form{
+    padding: 80px 50px;
+}
+
+form > input, form > button{
+    width: 100%;
+    margin-top:20px;
+}
+
+
+form input{
+    border:1px solid lightgray;
+    padding: 15px;
+    border-radius: 2px;
+    outline: none;
+}
+
+form input:focus, form input:active{
+    border:3px solid var(--main-clr)
+}
+
+form button{
+    border:0;
+    background-color:var(--main-clr);
+    color:white;
+    padding:15px;
+    font-weight:bold;
+    border-radius: 2px;
+    border-bottom: 5px solid var(--main-clr-dark);
+    transition: scale 0.5s;
+}
+
+form button:hover{scale: 1.01}
+
+form a{color:var(--main-clr)}
+
+form .error{
+    color:red;
+    font-size:0.9rem
+}
